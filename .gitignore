@@ -1,46 +1,65 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
+# ================================
+# Dependencies and Build Outputs
+# ================================
+
+# Dependencies
 /node_modules
 /.pnp
 .pnp.js
 
-# testing
-/coverage
-
-# next.js
+# Next.js build output
 /.next/
 /out/
 
-# production
+# Production builds
 /build
 
-# misc
-.DS_Store
-*.pem
+# ================================
+# Environment and Configuration
+# ================================
 
-# debug
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Local configuration files
+*.local
+
+# ================================
+# Development and IDE Files
+# ================================
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ================================
+# Logs and Runtime Data
+# ================================
+
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# local env files
-.env*.local
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-
-# IDE
-.vscode/
-.idea/
-
-# Logs
-logs
 *.log
+logs/
 
 # Runtime data
 pids
@@ -48,41 +67,86 @@ pids
 *.seed
 *.pid.lock
 
-# Optional npm cache directory
+# ================================
+# Cache and Temporary Files
+# ================================
+
+# Cache directories
 .npm
-
-# Optional eslint cache
-.eslintcache
-
-# Microbundle cache
+.nuxt
+.cache
+.parcel-cache
 .rpt2_cache/
 .rts2_cache_cjs/
 .rts2_cache_es/
 .rts2_cache_umd/
 
-# Optional REPL history
-.node_repl_history
-
-# Output of 'npm pack'
-*.tgz
-
-# Yarn Integrity file
-.yarn-integrity
-
-# dotenv environment variables file
-.env
-.env.development.local
-.env.test.local
-.env.production.local
-
-# parcel-bundler cache (https://parceljs.org/)
-.cache
-.parcel-cache
-
-# Storybook build outputs
-.out
-.storybook-out
-
 # Temporary folders
 tmp/
 temp/
+
+# ================================
+# Package and Build Artifacts
+# ================================
+
+# Package files
+*.tgz
+*.tar.gz
+
+# Yarn files
+.yarn-integrity
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# ================================
+# TypeScript and Testing
+# ================================
+
+# TypeScript
+*.tsbuildinfo
+
+# Test coverage
+/coverage
+.nyc_output
+
+# ================================
+# Platform Specific
+# ================================
+
+# Vercel
+.vercel
+
+# ESLint cache
+.eslintcache
+
+# REPL history
+.node_repl_history
+
+# ================================
+# Security
+# ================================
+
+# Security keys and certificates
+*.pem
+*.key
+*.crt
+
+# ================================
+# Custom Rules for This Project
+# ================================
+
+# Next.js specific
+next-env.d.ts
+
+# Storybook
+.storybook-out
+.out
+
+# ================================
+# Notes
+# ================================
+# This file ensures that only source code and configuration files are uploaded to GitHub.
+# All generated files, dependencies, and sensitive information are excluded.
